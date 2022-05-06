@@ -1,0 +1,58 @@
+{
+ 	title = LocationManager;
+ 	items = (
+ 		{
+ 			cell = PSSwitchCell;
+ 			defaults = com.my.re.lm.plist;
+ 			key = isEnabled;
+ 			default = true;
+ 			label = "启用";
+ 		}, 
+ 		{
+ 			cell = PSGroupCell;
+ 			label = "全局应用已选择的应用";
+ 		}, 
+ 		{
+ 			cell = PSSwitchCell;
+ 			defaults = com.my.re.lm.plist;
+ 			key = isGlobalEnabled;
+ 			default = true;
+ 			label = "开启全局修改";
+ 		},
+ 		{
+ 			type = CustomCell;
+ 			cell = LMLinkCell;
+ 			label = "选择的定位";
+ 			detail = LMDetailController;
+ 		},
+ 		{
+ 			cell = PSGroupCell;
+ 			label = "已选择的应用";
+ 		},
+ 		{
+ 			bundle = AppList;
+			cell = PSLinkCell;
+			isController = 1;
+			label = "选择";
+			ALNavigationTitle = "选择要开启功能的应用";
+			ALSettingsKeyPrefix = "lm.";
+			ALSettingsPath = "/var/mobile/Library/Preferences/com.my.re.lm.plist";
+			ALSectionDescriptors = (
+				{
+					title = "用户应用";
+					predicate = 'isSystemApplication = FALSE';
+					icon-size = 29;
+					suppress-hidden-apps = 1;
+					cell-class-name = ALSwitchCell;
+				},
+				{
+					title = "系统应用";
+					predicate = 'isSystemApplication = TRUE';
+					icon-size = 29;
+					suppress-hidden-apps = 1;
+					cell-class-name = ALSwitchCell;
+				}
+			);
+ 		},
+ 	);
+ }

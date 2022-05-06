@@ -1,0 +1,8 @@
+Package: com.my.re.lm
+Name: LocationManager
+Version: 0.0.1
+Architecture: iphoneos-arm
+Description: Modify Location 
+Maintainer: my
+Author: my1325
+Section: Utilities

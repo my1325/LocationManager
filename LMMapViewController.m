@@ -6,7 +6,6 @@
 #import <MapKit/MapKit.h>
 
 @interface CLLocationManager()
-+ (void)setAuthorizationStatus:(bool)arg1 forBundle:(id)arg2;
 + (void)setAuthorizationStatus:(bool)arg1 forBundleIdentifier:(id)arg2;
 @end
 
